@@ -25,6 +25,7 @@ public class Funcionario implements IFuncionario {
     AviaoLuxuoso al;
 
     public Funcionario(EnumTipoUsuario tipo,String senhaAdm, String userAdm){
+        this.adc = new AdminController();
         this.senhaAdm = senhaAdm;
         this.userAdm = userAdm;
         this.tipo = tipo;

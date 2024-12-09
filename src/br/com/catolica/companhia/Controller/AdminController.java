@@ -31,7 +31,7 @@ public class AdminController implements IAdminController {
         String user = x.nextLine();
         for (Map<String, String> us : AdminDao.bcContaAdm) {
             if (us.values().contains(user)) {
-                System.out.printf("Conta Admin Encontrada: %s", us);
+                System.out.printf("Conta Admin Encontrada: %s\n", us);
             }
         }
     }
@@ -43,7 +43,7 @@ public class AdminController implements IAdminController {
         String senha = x.nextLine();
         for (Map<String, String> us : AdminDao.bcContaAdm) {
             if (us.containsKey(senha)) {
-                System.out.printf("Conta Admin Encontrada: %s", us);
+                System.out.printf("Conta Admin Encontrada: %s\n", us);
             }
         }
 
