@@ -133,12 +133,23 @@ public class Funcionario implements IFuncionario {
 
     @Override
     public void acharUserAdmin() {
-        adc.procurarPorUser();
+        try{
+            adc.procurarPorUser();
+        }
+        catch (Exception e){
+            System.err.println("Erro ao Achar User");
+        }
     }
 
     @Override
     public void acharSenhaAdmin() {
-        adc.procurarPorSenha();
+        try{
+            adc.procurarPorSenha();
+        }
+        catch (Exception e){
+            System.err.println("Erro ao Achar Senha");
+        }
+
     }
 
 

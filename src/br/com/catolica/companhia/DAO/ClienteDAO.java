@@ -5,6 +5,7 @@ import br.com.catolica.companhia.Model.Cliente;
 import br.com.catolica.companhia.Model.Conta;
 
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class ClienteDAO extends ContaClienteDao {
@@ -15,7 +16,12 @@ public class ClienteDAO extends ContaClienteDao {
     }
 
     public Map<String, String> cadastroContaCliente() {
-        return cadastroConta();
+        try {
+            return cadastroConta();
+        } catch (Exception e) {
+            System.err.println("Erro ao Cadastrar Client");
+            return new HashMap<>();
+        }
     }
 
 }
